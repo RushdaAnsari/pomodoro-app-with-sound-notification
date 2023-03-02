@@ -18,7 +18,7 @@ class PomodoroTimer:
         # window style settings
         self.s = ttk.Style()
         self.s.theme_use('classic')
-        self.s.configure("TNotebook.Tab", font=("Ubuntu", 13), background="#e63010")
+        self.s.configure("TNotebook.Tab", font=("Ubuntu", 13), background="Tomato2")
         self.s.configure("Tbutton.Tab", font=("Ubuntu", 16))
 
         # tabs settings
@@ -46,16 +46,16 @@ class PomodoroTimer:
 
         # grid layout
         self.grid_layout = ttk.Frame(self.root)
-        self.grid_layout.pack(pady=10)
+        self.grid_layout.pack(pady=20)
 
         # adding buttons
-        self.start_button = ttk.Button(self.grid_layout, text="Start", command=self.start_timer_thread)
+        self.start_button = tk.Button(self.grid_layout, text="Start", command=self.start_timer_thread, bg="Tomato2", padx=10, pady=5)
         self.start_button.grid(row=0, column=0)
         
-        self.skip_button = ttk.Button(self.grid_layout, text="Skip", command=self.skip_clock)
+        self.skip_button = tk.Button(self.grid_layout, text="Skip", command=self.skip_clock, bg="Tomato2", padx=10, pady=5)
         self.skip_button.grid(row=0, column=1)
 
-        self.reset_button = ttk.Button(self.grid_layout, text="Reset", command=self.reset_clock)
+        self.reset_button = tk.Button(self.grid_layout, text="Reset", command=self.reset_clock, bg="Tomato2", padx=10, pady=5)
         self.reset_button.grid(row=0, column=2)
 
         # counting pomodoro sessions
