@@ -11,7 +11,7 @@ class PomodoroTimer:
         self.root = tk.Tk()
         self.root.geometry("600x350")
         self.root.title("Pomodoro Timer")
-        self.root.tk.call("wm", "iconphoto", self.root._w, PhotoImage(file="img/bg.png")) 
+        self.root.tk.call("wm", "iconphoto", self.root._w, PhotoImage(file="img/tomato.png")) 
         mixer.init()
         mixer.music.load('audio/clock-alarm.mp3') 
 
